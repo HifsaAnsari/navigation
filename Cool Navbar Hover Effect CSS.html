@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #000;
+        }
+        
+        .wrapper {
+            width: 900px;
+            margin: 20% auto;
+            list-style: none;
+        }
+        
+        .nav-area {
+            width: 10%;
+            height: 20px;
+            float: left;
+            margin: 0 15px;
+            background: #111;
+            padding: 30px;
+            font-family: "big john", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            position: relative;
+        }
+        
+        .nav-area:before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #f8f40d, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            -webkit-backdrop-size: 400%;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: animate 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease;
+        }
+        
+        .nav-area:hover:before {
+            opacity: 1;
+        }
+        
+        .nav-area::after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #111;
+            left: 0;
+            top: 0;
+        }
+        
+        .nav-area a {
+            text-decoration: none;
+            color: #fff;
+        }
+        
+        @keyframes animate {
+            0% {
+                background-position: 0 0;
+            }
+            50% {
+                background-position: 400% 0;
+            }
+            100% {
+                background-position: 0 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="menu-button">
+
+        <li class="nav-area"><a href="#">home</a></li>
+        <li class="nav-area"><a href="#">about</a></li>
+        <li class="nav-area"><a href="#">portfolio</a></li>
+        <li class="nav-area"><a href="#">services</a></li>
+        <li class="nav-area"><a href="#">contact</a></li>
+    </ul>
+</body>
+
+</html>

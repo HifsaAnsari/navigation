@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #101010;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        
+        ul {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul li {
+            list-style: none;
+        }
+        
+        ul li a {
+            position: relative;
+            display: block;
+            text-align: center;
+            margin: 0 10px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: lightcoral;
+            font-size: 30px;
+            transition: .5s;
+            padding: 10px;
+        }
+        
+        ul li a:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-top: 2px solid firebrick;
+            border-left: 2px solid firebrick;
+            transform-origin: left;
+            box-sizing: border-box;
+            transition: 0.5s;
+        }
+        
+        ul li a:hover:before {
+            width: 10px;
+            height: 10px;
+            transform: rotate(-360deg);
+        }
+        
+        ul li a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            border-right: 2px solid firebrick;
+            border-bottom: 2px solid firebrick;
+            transform-origin: right;
+            box-sizing: border-box;
+            transition: 0.5s;
+        }
+        
+        ul li a:hover:after {
+            width: 10px;
+            height: 10px;
+            transform: rotate(360deg);
+        }
+        
+        ul li a:hover {
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Services</a></li>
+        <li><a href="">work</a></li>
+        <li><a href="">design</a></li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sliding Push Navigation Menu Demo</title>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+<style>
+body {
+  font-family: 'Roboto Condensed', arial, sans-serif;
+  margin: 0;
+  background-color:#fafafa;
+}
+
+/* -- main content -- */
+.content-container {
+  position: relative;
+  z-index: 0;
+  padding: 20px;
+  max-width: 728px;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
+}
+
+.site-title {
+  text-align: center;
+  border-bottom: 1px solid #111111;
+  margin-bottom: 24px;
+}
+
+.site-title h1 {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
+img {
+  width: 100%;
+}
+
+.content p {
+  line-height: 1.6em;
+  margin-bottom: 24px;
+}
+
+/* -- Slideout Sidebar -- */
+
+.slideout-sidebar {
+  position: fixed;
+  top: 0;
+  left: -190px;
+  z-index: 0;
+  width: 150px;
+  height: 100%;
+  padding: 20px;
+  background-color: #212121;
+  transition: all 300ms ease-in-out;
+}
+
+.slideout-sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideout-sidebar ul li {
+  cursor: pointer;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(244,244,244,0.4);
+  color: rgba(244,244,244,0.7);
+}
+
+.slideout-sidebar ul li:last-child {
+  border-bottom: 0;
+}
+
+.slideout-sidebar ul li:hover {
+  color: rgba(244,244,244,1);
+}
+
+/* -- Menu Icon -- */
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 18px;
+  left: 30px;
+  font-size: 24px;
+  z-index: 1;
+  transition: all 300ms ease-in-out;
+}
+
+
+
+/*-- The Magic --*/
+#menu-toggle:checked ~ .slideout-sidebar {
+  left: 0px;
+}
+
+#menu-toggle:checked + .menu-icon {
+  left: 210px;
+}
+
+#menu-toggle:checked ~ .content-container {
+  padding-left: 190px;
+}
+
+/* -- Media Queries -- */
+
+@media (max-width: 991px) {
+  
+  .content-container {
+    max-width: 480px;
+  }
+  
+}
+
+@media (max-width: 767px) {
+  
+  .content-container {
+    max-width: 100%;
+    margin: 30px auto 0;
+  }
+  
+  #menu-toggle:checked ~ .content-container {
+    padding-left: 0;
+  }
+  
+  .slideout-sidebar ul {
+    text-align: center;
+    max-width: 200px;
+    margin: 30px auto 0;
+  }
+  
+  .menu-icon {
+    left: 20px
+  }
+  
+  #menu-toggle:checked ~ .slideout-sidebar {
+    width: 100%;
+  }
+  
+  #menu-toggle:checked + .menu-icon {
+    left: 87%;
+    color: #fafafa;
+  }
+  
+  @media screen  
+    and (max-width: 736px) 
+    and (orientation: landscape) {
+      
+      .slideout-sidebar {
+        padding: 0;
+      }
+      
+      .slideout-sidebar ul {
+        max-width: 100%;
+        margin: 60px auto 0;
+      }
+      
+      .slideout-sidebar ul li {
+        display: inline-block;
+        border-bottom: 0;
+        width: 72px;
+        padding: 18px 24px;
+        margin: 0 6px 12px;
+        color: #ffffff;
+        background-color: #777;
+      }
+
+  }
+  
+}
+</style>
+</head>
+
+<body>
+<input type="checkbox" id="menu-toggle" />
+<label for="menu-toggle" class="menu-icon"><i class="fa fa-bars"></i></label>
+<div class="content-container">
+  <div class="site-title">
+    <h1>Push Navigation</h1>
+  </div>
+  <div class="css-script-ads" style="margin:30px auto;">
+    <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* CSSScript Demo Page */
+google_ad_slot = "3025259193";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+      <script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+  <div class="content">
+    <img src="https://placeimg.com/720/250/people" alt="" class="" />
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget nulla mollis, efficitur urna nec, viverra dolor. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent efficitur finibus eros sit amet sagittis. Ut sollicitudin sodales neque et volutpat. Curabitur dictum ante vel fermentum volutpat. Curabitur ac neque et erat viverra egestas.</p>
+  </div>
+</div>
+<div class="slideout-sidebar">
+  <ul>
+    <li><i class="fa fa-home"></i> Home</li>
+    <li><i class="fa fa-user"></i> About Us</li>
+    <li><i class="fa fa-book"></i> Blog</li>
+    <li><i class="fa fa-envelope"></i> Contact</li>
+  </ul>
+</div>
+</body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46156385-1', 'cssscript.com');
+  ga('send', 'pageview');
+
+</script>
+</html>

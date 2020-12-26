@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SVG Button Hover | Webdevtrick.com</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+    <style>
+        /** Code By Webdevtrick ( https://webdevtrick.com ) **/
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .buttons {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            margin-top: 15%;
+        }
+        
+        #main {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #212121;
+            font-family: Raleway;
+        }
+        
+        .wrapper {
+            margin-top: 25px;
+            position: relative;
+            width: 150px;
+            height: 40px;
+            display: inline-block;
+            border-radius: 3px;
+            margin-left: 10px;
+            margin-right: 10px
+        }
+        
+        #btn {
+            stroke-width: 6px;
+            fill: transparent;
+            stroke: #FFF;
+            stroke-dasharray: 85 400;
+            stroke-dashoffset: -220;
+            transition: 1s all ease;
+        }
+        
+        #btn-text {
+            margin-top: -35px;
+            text-align: center;
+        }
+        
+        #btn-text a {
+            color: white;
+            text-decoration: none;
+            font-weight: 100;
+            font-size: 1.1em;
+        }
+        
+        .wrapper:hover #btn {
+            stroke-dasharray: 50 0;
+            stroke-width: 3px;
+            stroke-dashoffset: 0;
+            stroke: #2aff44;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div class="buttons">
+
+            <div class="wrapper">
+                <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+        <rect id="btn" height="40" width="150" />
+        <div id="btn-text">
+          <a href="">#1 BUTTON</a>
+        </div>
+      </svg>
+            </div>
+
+            <div class="wrapper">
+                <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+        <rect id="btn" height="40" width="150" />
+        <div id="btn-text">
+          <a href="">#2 BUTTON</a>
+        </div>
+      </svg>
+            </div>
+
+            <div class="wrapper">
+                <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+        <rect id="btn" height="40" width="150" />
+        <div id="btn-text">
+          <a href=""></span>#3 BUTTON</a>
+        </div>
+      </svg>
+            </div>
+        </div>
+
+</body>
+
+</html>

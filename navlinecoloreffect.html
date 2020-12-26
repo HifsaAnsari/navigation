@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: black;
+        }
+        
+        nav {
+            position: absolute;
+            top: 50%;
+        }
+        
+        a {
+            color: blanchedalmond;
+            text-align: center;
+            text-decoration: none;
+            width: 120px;
+            padding: 1em 0;
+            display: inline-block;
+            font-weight: bold;
+            transition: all .4s ease-in-out;
+        }
+        
+        .line {
+            width: 120px;
+            height: 3px;
+            background-color: purple;
+        }
+        
+        a:nth-child(2):hover~.line {
+            transform: translate(125px);
+            transition: all .4s ease-in-out;
+            background-color: salmon;
+        }
+        
+        a:nth-child(3):hover~.line {
+            transform: translate(250px);
+            transition: all .4s ease-in-out;
+            background-color: slateblue;
+        }
+        
+        a:nth-child(4):hover~.line {
+            transform: translate(375px);
+            transition: all .4s ease-in-out;
+            background-color: teal;
+        }
+        
+        a:nth-child(5):hover~.line {
+            transform: translate(500px);
+            transition: all .4s ease-in-out;
+            background-color: yellowgreen;
+        }
+        
+        a:nth-child(2):hover {
+            color: red;
+        }
+        
+        a:nth-child(3):hover {
+            color: seagreen;
+        }
+        
+        a:nth-child(4):hover {
+            color: slateblue;
+        }
+        
+        a:nth-child(5):hover {
+            color: sandybrown;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#">home</a></li>
+        <a href="#">about</a></li>
+        <a href="#">protfolio</a></li>
+        <a href="#">services</a></li>
+        <a href="#">contact</a></li>
+        <div class="line"></div>
+        <nav>
+
+
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .wrapper {
+            background: #262626;
+            height: 100vh;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .wrapper ul {
+            margin: 0;
+            padding: 0;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+        }
+        
+        .wrapper ul li {
+            list-style-type: none;
+            margin: 0 20px;
+            transition: .5s;
+        }
+        
+        .wrapper ul li a {
+            display: block;
+            position: relative;
+            text-decoration: none;
+            padding: 5px;
+            font-size: 18px;
+            font-family: audioide;
+            color: #fafafa;
+            text-transform: uppercase;
+            transition: .5s;
+        }
+        
+        .wrapper ul:hover li a {
+            transform: scale(1);
+            opacity: .2;
+            filter: blur(1px);
+        }
+        
+        .wrapper ul li a:hover {
+            transform: scale(1.5);
+            opacity: 1;
+            filter: blur(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <ul>
+
+            <li><a href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">protfolio</a></li>
+            <li><a href="#">services</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

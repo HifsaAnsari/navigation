@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+    <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+    <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+    <title>CodePen - Pure CSS Slide Out Menu</title>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Muli:400,300italic,300'>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Muli', sans-serif;
+        }
+        
+        .menu {
+            font-weight: 100;
+            background: #efefef;
+            width: 150px;
+            height: 100%;
+            padding-left: 50px;
+            position: fixed;
+            z-index: 100;
+            -webkit-box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
+            right: -130px;
+            transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+            color: #222;
+        }
+        
+        .menu:hover,
+        .menu:focus {
+            transform: translate3d(-130px, 0, 0);
+            animation-timing-function: 1s ease-in;
+        }
+        
+        .menu .title {
+            top: 50%;
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            transform: rotate(270deg);
+            left: 10px;
+            font-weight: 800;
+            font-size: 15px;
+        }
+        
+        .menu .nav {
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            font-weight: 100;
+        }
+        
+        .menu .nav li {
+            padding-bottom: 30px;
+            list-style-type: none;
+        }
+        
+        .menu .nav li a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+        }
+        
+        .menu .nav li a:hover {
+            color: #aaa;
+        }
+        
+        .intro {
+            position: absolute;
+            top: 30%;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            font-size: 45px;
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+    <script>
+        window.console = window.console || function(t) {};
+    </script>
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+        }
+    </script>
+</head>
+
+<body translate="no">
+    <div class="menu">
+        <div class="title">MENU</div>
+        <ul class="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="intro">
+        Hover over the menu.<br> Thanks for visiting.
+    </div>
+    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js">
+        window.HUB_EVENTS = {
+            ASSET_ADDED: "ASSET_ADDED",
+            ASSET_DELETED: "ASSET_DELETED",
+            ASSET_DESELECTED: "ASSET_DESELECTED",
+            ASSET_SELECTED: "ASSET_SELECTED",
+            ASSET_UPDATED: "ASSET_UPDATED",
+            CONSOLE_CHANGE: "CONSOLE_CHANGE",
+            CONSOLE_CLOSED: "CONSOLE_CLOSED",
+            CONSOLE_EVENT: "CONSOLE_EVENT",
+            CONSOLE_OPENED: "CONSOLE_OPENED",
+            CONSOLE_RUN_COMMAND: "CONSOLE_RUN_COMMAND",
+            CONSOLE_SERVER_CHANGE: "CONSOLE_SERVER_CHANGE",
+            EMBED_ACTIVE_PEN_CHANGE: "EMBED_ACTIVE_PEN_CHANGE",
+            EMBED_ACTIVE_THEME_CHANGE: "EMBED_ACTIVE_THEME_CHANGE",
+            EMBED_ATTRIBUTE_CHANGE: "EMBED_ATTRIBUTE_CHANGE",
+            EMBED_RESHOWN: "EMBED_RESHOWN",
+            FORMAT_FINISH: "FORMAT_FINISH",
+            FORMAT_ERROR: "FORMAT_ERROR",
+            FORMAT_START: "FORMAT_START",
+            IFRAME_PREVIEW_RELOAD_CSS: "IFRAME_PREVIEW_RELOAD_CSS",
+            IFRAME_PREVIEW_URL_CHANGE: "IFRAME_PREVIEW_URL_CHANGE",
+            KEY_PRESS: "KEY_PRESS",
+            LINTER_FINISH: "LINTER_FINISH",
+            LINTER_START: "LINTER_START",
+            PEN_CHANGE_SERVER: "PEN_CHANGE_SERVER",
+            PEN_CHANGE: "PEN_CHANGE",
+            PEN_EDITOR_CLOSE: "PEN_EDITOR_CLOSE",
+            PEN_EDITOR_CODE_FOLD: "PEN_EDITOR_CODE_FOLD",
+            PEN_EDITOR_ERRORS: "PEN_EDITOR_ERRORS",
+            PEN_EDITOR_EXPAND: "PEN_EDITOR_EXPAND",
+            PEN_EDITOR_FOLD_ALL: "PEN_EDITOR_FOLD_ALL",
+            PEN_EDITOR_LOADED: "PEN_EDITOR_LOADED",
+            PEN_EDITOR_REFRESH_REQUEST: "PEN_EDITOR_REFRESH_REQUEST",
+            PEN_EDITOR_RESET_SIZES: "PEN_EDITOR_RESET_SIZES",
+            PEN_EDITOR_SIZES_CHANGE: "PEN_EDITOR_SIZES_CHANGE",
+            PEN_EDITOR_UI_CHANGE_SERVER: "PEN_EDITOR_UI_CHANGE_SERVER",
+            PEN_EDITOR_UI_CHANGE: "PEN_EDITOR_UI_CHANGE",
+            PEN_EDITOR_UI_DISABLE: "PEN_EDITOR_UI_DISABLE",
+            PEN_EDITOR_UI_ENABLE: "PEN_EDITOR_UI_ENABLE",
+            PEN_EDITOR_UNFOLD_ALL: "PEN_EDITOR_UNFOLD_ALL",
+            PEN_ERROR_INFINITE_LOOP: "PEN_ERROR_INFINITE_LOOP",
+            PEN_ERROR_RUNTIME: "PEN_ERROR_RUNTIME",
+            PEN_ERRORS: "PEN_ERRORS",
+            PEN_LIVE_CHANGE: "PEN_LIVE_CHANGE",
+            PEN_LOGS: "PEN_LOGS",
+            PEN_MANIFEST_CHANGE: "PEN_MANIFEST_CHANGE",
+            PEN_MANIFEST_FULL: "PEN_MANIFEST_FULL",
+            PEN_PREVIEW_FINISH: "PEN_PREVIEW_FINISH",
+            PEN_PREVIEW_START: "PEN_PREVIEW_START",
+            PEN_SAVED: "PEN_SAVED",
+            POPUP_CLOSE: "POPUP_CLOSE",
+            POPUP_OPEN: "POPUP_OPEN",
+            POST_CHANGE: "POST_CHANGE",
+            POST_SAVED: "POST_SAVED",
+            PROCESSING_FINISH: "PROCESSING_FINISH",
+            PROCESSING_START: "PROCESSED_STARTED"
+        }, "object" != typeof window.CP && (window.CP = {}), window.CP.PenTimer = {
+            programNoLongerBeingMonitored: !1,
+            timeOfFirstCallToShouldStopLoop: 0,
+            _loopExits: {},
+            _loopTimers: {},
+            START_MONITORING_AFTER: 2e3,
+            STOP_ALL_MONITORING_TIMEOUT: 5e3,
+            MAX_TIME_IN_LOOP_WO_EXIT: 2200,
+            exitedLoop: function(E) {
+                this._loopExits[E] = !0
+            },
+            shouldStopLoop: function(E) {
+                if (this.programKilledSoStopMonitoring) return !0;
+                if (this.programNoLongerBeingMonitored) return !1;
+                if (this._loopExits[E]) return !1;
+                var _ = this._getTime();
+                if (0 === this.timeOfFirstCallToShouldStopLoop) return this.timeOfFirstCallToShouldStopLoop = _, !1;
+                var o = _ - this.timeOfFirstCallToShouldStopLoop;
+                if (o < this.START_MONITORING_AFTER) return !1;
+                if (o > this.STOP_ALL_MONITORING_TIMEOUT) return this.programNoLongerBeingMonitored = !0, !1;
+                try {
+                    this._checkOnInfiniteLoop(E, _)
+                } catch (N) {
+                    return this._sendErrorMessageToEditor(), this.programKilledSoStopMonitoring = !0, !0
+                }
+                return !1
+            },
+            _sendErrorMessageToEditor: function() {
+                try {
+                    if (this._shouldPostMessage()) {
+                        var E = {
+                            topic: HUB_EVENTS.PEN_ERROR_INFINITE_LOOP,
+                            data: {
+                                line: this._findAroundLineNumber()
+                            }
+                        };
+                        parent.postMessage(E, "*")
+                    } else this._throwAnErrorToStopPen()
+                } catch (_) {
+                    this._throwAnErrorToStopPen()
+                }
+            },
+            _shouldPostMessage: function() {
+                return document.location.href.match(/boomerang/)
+            },
+            _throwAnErrorToStopPen: function() {
+                throw "We found an infinite loop in your Pen. We've stopped the Pen from running. Please correct it or contact support@codepen.io."
+            },
+            _findAroundLineNumber: function() {
+                var E = new Error,
+                    _ = 0;
+                if (E.stack) {
+                    var o = E.stack.match(/boomerang\S+:(\d+):\d+/);
+                    o && (_ = o[1])
+                }
+                return _
+            },
+            _checkOnInfiniteLoop: function(E, _) {
+                if (!this._loopTimers[E]) return this._loopTimers[E] = _, !1;
+                var o;
+                if (_ - this._loopTimers[E] > this.MAX_TIME_IN_LOOP_WO_EXIT) throw "Infinite Loop found on loop: " + E
+            },
+            _getTime: function() {
+                return +new Date
+            }
+        }, window.CP.shouldStopExecution = function(E) {
+            var _ = window.CP.PenTimer.shouldStopLoop(E);
+            return !0 === _ && console.warn("[CodePen]: An infinite loop (or a loop taking too long) was detected, so we stopped its execution. Sorry!"), _
+        }, window.CP.exitedLoop = function(E) {
+            window.CP.PenTimer.exitedLoop(E)
+        };
+    </script>
+    <script id="rendered-js">
+        // Hey.
+        //# sourceURL=pen.js
+    </script>
+</body>
+
+</html>
